@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PessoasComponent } from './pessoas/pessoas.component';
 import { PessoasDetalheComponent } from './pessoas-detalhe/pessoas-detalhe.component';
 import { pessoas } from './pessoas/pessoas.model';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,8 @@ import { pessoas } from './pessoas/pessoas.model';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

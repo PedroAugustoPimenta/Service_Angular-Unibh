@@ -1,1 +1,24 @@
-<p>pessoas works!</p>
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-dark">
+
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Detalhe</th>
+            </tr>
+        </thead>
+        <tr *ngFor='let pessoa of pessoasArray'>
+            <td>{{pessoa.id}}</td>
+            <td>{{pessoa.name}}</td>
+            <td>{{pessoa.email}}</td>
+            <td><button (click)="DetalheDaPessoa(pessoa.id)">Detalhe</button></td>
+        </tr>
+    </table>
+
+    <div *ngIf="detalhePessoa">
+        <app-pessoas-detalhe [pessoas]="pessoas" (alterar)="AlterarPessoa($event)"></app-pessoas-detalhe>
+    </div>
+</div>
